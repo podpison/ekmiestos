@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+  }
+  body {
+    @apply text-gray text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px]
+  }
+  // main {
+  //   @apply mt-[116px]
+  // }
+  h1 {
+    @apply text-[25px] sm:text-[30px] md:text-[35px] lg:text-[42px]
+  }
+  h2 {
+    @apply text-[20px] sm:text-[25px] md:text-[30px] lg:text-[35px]
+  }
+  h3 {
+    @apply text-[20px] sm:text-[22px] md:text-[24px] lg:text-[25px]
+  }
+  h4 {
+    @apply text-[20px] sm:text-[20px] md:text-[24px] lg:text-[28px]
+  }
+  p {
+    @apply text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px]
+  }
+}
