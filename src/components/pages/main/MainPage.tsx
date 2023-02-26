@@ -1,5 +1,7 @@
-export const MainPage: React.FC = () => {
-  return <section>
+import { Hero } from "./Hero";
 
-  </section>
+export const MainPage: React.FC = () => {
+  return <main>
+    <Hero />
+  </main>
 };

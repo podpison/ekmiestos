@@ -6,7 +6,6 @@ export const useFocus = (ref: React.RefObject<HTMLDivElement>, callback: () => v
       if (!ref.current) return;
 
       let withinBoundaries = e.composedPath().includes(ref.current);
-
       !withinBoundaries && callback();
     };
 

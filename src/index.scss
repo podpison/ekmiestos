@@ -17,11 +17,11 @@
   body {
     @apply text-gray text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px]
   }
-  // main {
-  //   @apply mt-[116px]
-  // }
+  main {
+    @apply mt-[76px] sm:mt-[98px] lg:mt-28
+  }
   h1 {
-    @apply text-[25px] sm:text-[30px] md:text-[35px] lg:text-[42px]
+    @apply font-semibold text-[25px] sm:text-[30px] md:text-[35px] lg:text-[42px]
   }
   h2 {
     @apply text-[20px] sm:text-[25px] md:text-[30px] lg:text-[35px]

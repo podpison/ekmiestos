@@ -21,7 +21,7 @@ module.exports = {
         'mw': '1170px'
       },
       boxShadow: {
-        'default': '0px 4px 9px 2px rgba(0, 0, 0, 0.15)',
+        'default': '0px 0px 9px 2px rgba(0, 0, 0, 0.15)',
       }
     },
   },
