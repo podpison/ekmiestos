@@ -1,0 +1,15 @@
+.carousel {
+  @apply max-md:w-screen max-md:-ml-2.5;
+  .slick-dots {
+    bottom: -30px;
+    li {
+      @apply m-0;
+      &.slick-active button:before {
+        @apply text-orange;
+      }
+      button:before {
+        @apply text-white opacity-100 text-[7px] md:text-light;
+      }
+    }
+  }
+}
