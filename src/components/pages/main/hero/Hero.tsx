@@ -31,6 +31,6 @@ export const Hero: React.FC = () => {
     </h1>
     <Carousel className="mt-7 md:row-[2/4] md:col-[2]" items={CarouselItems} />
     <p className="text-[20px] text-white text-center md:row-[1] max-md:mt-10 md:col-[1/3] md:text-end">Основано в 1993 году</p>
-    <Button className="bg-orange max-md:mx-auto md:w-fit max-md:mt-5 lg:-mt-[30px]">Перейти в каталог</Button>
+    <Button className="max-md:mx-auto md:w-fit max-md:mt-5 lg:-mt-[30px]" isOrange>Перейти в каталог</Button>
   </section>
 };

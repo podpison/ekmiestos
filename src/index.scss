@@ -26,15 +26,19 @@
     @apply font-semibold text-[25px] leading-tight sm:text-[30px] sm:leading-tight md:text-[35px] md:leading-tight lg:text-[42px] lg:leading-tight
   }
   h2 {
-    @apply text-[20px] sm:text-[25px] md:text-[30px] lg:text-[35px]
+    @apply font-bold text-[20px] sm:text-[25px] md:text-[30px] lg:text-[35px]
   }
   h3 {
     @apply text-[20px] sm:text-[22px] md:text-[24px] lg:text-[25px]
   }
   h4 {
-    @apply text-[20px] sm:text-[20px] md:text-[24px] lg:text-[28px]
+    @apply font-medium text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px]
   }
-  p {
-    @apply text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px]
+
+  .mt20-30 {
+    @apply mt-5 md:mt-[30px]
+  }
+  .mt10-15 {
+    @apply mt-2.5 md:mt-[15px]
   }
 }

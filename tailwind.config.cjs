@@ -18,7 +18,8 @@ module.exports = {
         'teal': '#A9C2BE',
       },
       screens: {
-        'mw': '1170px'
+        'mw': '1170px',
+        'esm': '470px', //extra small
       },
       boxShadow: {
         'default': '0px 0px 9px 2px rgba(0, 0, 0, 0.15)',
