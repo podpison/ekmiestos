@@ -1,7 +1,7 @@
 import cn from 'classnames';
 
 type Props = {
-  arrowClassName: string
+  arrowClassName?: string
   d: string
 
   onClick?: () => void //props from the slider
@@ -9,7 +9,7 @@ type Props = {
   styles?: React.CSSProperties
 }
 
-export const Arrow: React.FC<Props> = ({ d, arrowClassName, className, ...props }) => {
+export const ChevronArrow: React.FC<Props> = ({ d, arrowClassName, className, ...props }) => {
   return <svg
     className={cn('transition-opacity [&.slick-disabled]:cursor-default [&.slick-disabled]:opacity-20', className, arrowClassName)}
     {...props}

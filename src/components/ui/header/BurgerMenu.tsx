@@ -28,7 +28,7 @@ export const BurgerMenu: React.FC<Props> = ({ isActive, setIsActive, links }) =>
       <span className={cn('mb-0 origin-[32px]', lineClassNames, isActive && 'top-[11px]')} />
     </div>
     <motion.div
-      className='absolute right-0 top-4 flex flex-col bg-white px-5 py-7 md:top-5 lg:top-6'
+      className='absolute -right-5 top-4 flex flex-col bg-white px-5 py-7 md:top-5 lg:top-6'
       animate={{ x: isActive ? 0 : 310 }}
       initial={false}
     >

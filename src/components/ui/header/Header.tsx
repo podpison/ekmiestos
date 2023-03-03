@@ -81,8 +81,8 @@ export const Header: React.FC = () => {
     {Links.slice(0, 3)}
     <Logo />
     {Links.slice(3, 4)}
-    <Lngs />
     <Phone />
+    <Lngs />
     <BurgerMenu isActive={isMenuOpen} setIsActive={handleMenuStatus} links={links} />
   </header>
 };

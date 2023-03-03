@@ -1,9 +1,8 @@
 import { FLO } from '../../../ui/FLO';
-import Slider from "react-slick";
 import { Item } from './Item';
-import { Arrow } from './Arrow';
 import { Button } from '../../../ui/Button';
 import { Link } from 'react-router-dom';
+import { Slider } from '../../../ui/slider/Slider';
 
 const items = [
   {
@@ -50,19 +49,14 @@ const items = [
   },
 ];
 
-export type NoveltiesItemType = typeof items[0]
+export type GoodsType = typeof items[0]
 
 const settings = {
   dots: false,
-  arrows: true,
-  draggable: false,
   infinite: false,
-  autoplay: true,
   autoplaySpeed: 10000,
   slidesToShow: 3,
   slidesToScroll: 1,
-  nextArrow: <Arrow arrowClassName='-right-[30px] lg:-right-5' d='M0.999999 1L14 13.5217L1 25' />,
-  prevArrow: <Arrow arrowClassName='-left-[30px] lg:-left-5' d='M15 1L2 13.5217L15 25' />,
   responsive: [
     {
       breakpoint: 900,
@@ -82,9 +76,9 @@ const settings = {
 export const Novelties: React.FC = () => {
   let Items = items.map(i => <Item {...i} key={i.id} />);
 
-  return <section className='mt-[90px] sm:mt-28 md:mt-32 lg:mt-40'>
+  return <section className='mt90-160'>
     <h2><FLO text='Новинки' /></h2>
-    <Slider className='w-[calc(100%_-_50px)] max-w-[1070px] mx-auto mt-7' {...settings}>
+    <Slider className='mt30-80 w-[calc(100%_-_50px)] max-w-[1070px] mx-auto' settings={settings} isChevronArrows>
       {Items}
     </Slider>
     <Link className='block w-fit mx-auto mt-[60px]' to='/catalog'>

@@ -35,6 +35,16 @@
     @apply font-medium text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px]
   }
 
+  .letterSpacing01 {
+    @apply tracking-[0.1em]
+  }
+
+  .mt90-160 {
+    @apply mt-[90px] sm:mt-28 md:mt-32 lg:mt-40;
+  }
+  .mt30-80 {
+    @apply mt-[30px] sm:mt-11 md:mt-14 lg:mt-20;
+  }
   .mt20-30 {
     @apply mt-5 md:mt-[30px]
   }

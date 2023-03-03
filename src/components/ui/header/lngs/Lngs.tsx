@@ -21,7 +21,7 @@ export const Lngs: React.FC = () => {
 
   const Items = lngs.map((i, index) => <Item lng={i} isActive={i === currentLng} onClick={handleItemClick} key={index} />);
 
-  return <div className="relative ml-auto" ref={ref}>
+  return <div className="relative ml-7 sm:ml-9 md:ml-0" ref={ref}>
     <button
       className="group flex items-center uppercase transition font-semibold text-[14px]"
       onClick={handleOpenStatus}
