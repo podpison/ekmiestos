@@ -13,6 +13,7 @@ export const Button: React.FC<Props> = ({ children, className, isOrange }) => {
       className,
       isOrange && 'bg-orange hover:bg-light-gray'
     )}
+    type='submit'
   >
     {children}
   </button>

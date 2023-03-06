@@ -34,6 +34,16 @@
   h4 {
     @apply font-medium text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px]
   }
+  h6 {
+    @apply font-medium text-[10px] sm:text-[12px] lg:text-[14px]
+  }
+
+  .text20-28 {
+    @apply text-[20px] sm:text-[23px] md:text-[25px] lg:text-[28px]
+  }
+  .text10-14 {
+    @apply text-[10px] sm:text-[12px] lg:text-[14px]
+  }
 
   .letterSpacing01 {
     @apply tracking-[0.1em]

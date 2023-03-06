@@ -5,6 +5,8 @@ import { YearOfFoundation } from "./YearOfFoundation";
 import { FactsAboutUs } from "./factsAboutUs/FactsAboutUs";
 import { OurHistory } from './OurHistory';
 import { LastPublications } from "./lastPublications/LastPublications";
+import { HaveQuestions } from './../../ui/haveQuestions/HaveQuestions';
+import { OurPartners } from "./OurPartners";
 
 export const MainPage: React.FC = () => {
   return <main>
@@ -14,6 +16,8 @@ export const MainPage: React.FC = () => {
     <OurHistory />
     <YearOfFoundation />
     <LastPublications />
+    <HaveQuestions />
     <FactsAboutUs />
+    <OurPartners />
   </main>
 };
