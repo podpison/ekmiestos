@@ -8,6 +8,7 @@ import { HugeO } from '../HugeO';
 
 type Props = {
   heading: string
+  className?: string
 }
 
 const signupSchema = Yup.object().shape({
@@ -35,8 +36,8 @@ const initialValues = {
   termsOfUse: true,
 };
 
-export const RequestCall: React.FC<Props> = ({ heading }) => {
-  return <div className='relative w-full max-w-[470px] bg-white pt-5 pb-4 px-9 max-sm:mx-auto sm:ml-auto sm:pt-6 sm:px-10 md:pt-7 md:px-12'>
+export const RequestCall: React.FC<Props> = ({ heading, className }) => {
+  return <div className={cn('relative w-full max-w-[470px] bg-white pt-5 pb-4 px-9 sm:pt-6 sm:px-10 md:pt-7 md:px-12', className)}>
     <HugeO className='-left-20 -top-9' />
     <h6 className='text-orange'>Заполните форму</h6>
     <h2 className="text20-28 uppercase mt-2.5 sm:mt-4">{heading}</h2>
@@ -49,6 +50,7 @@ export const RequestCall: React.FC<Props> = ({ heading }) => {
       }}
     >
       {({ errors, touched, values }) => {
+        console.log(errors)
         return <FormikForm>
           <Input
             name='firstName'

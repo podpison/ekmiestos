@@ -1,12 +1,12 @@
 import cn from 'classnames';
-import { HeaderLinkType } from './Header';
 import { Link } from './Link';
 import { motion } from "framer-motion";
+import { NavLinkType } from '../../../static';
 
 type Props = {
   isActive: boolean
   setIsActive: () => void
-  links: HeaderLinkType[]
+  links: NavLinkType[]
 }
 
 
@@ -18,8 +18,9 @@ export const BurgerMenu: React.FC<Props> = ({ isActive, setIsActive, links }) =>
     chevronClassName='hidden'
     hoverItemsContainerClassName='w-full'
     hoverItemClassName='pl-5 before:content-["-"] before:mr-1'
-    {...l} key={index} />
-  );
+    {...l}
+    key={index}
+  />);
 
   return <div className='md:hidden'>
     <div className="relative w-6 h-6 cursor-pointer z-10 ml-7 sm:ml-9 md:ml-12" onClick={setIsActive}>

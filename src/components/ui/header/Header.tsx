@@ -6,67 +6,13 @@ import { Lngs } from './lngs/Lngs';
 import { Phone } from './Phone';
 import { Link } from './Link';
 import { FullBg } from '../FullBg';
-
-const links = [
-  {
-    name: 'Каталог',
-    to: 'catalog',
-    hoverItems: [
-      {
-        name: 'Диваны',
-        to: 'sofas'
-      },
-      {
-        name: 'Кресла',
-        to: 'armchairs'
-      },
-      {
-        name: 'Стулья',
-        to: 'chairs'
-      },
-      {
-        name: 'Кровати',
-        to: 'beds'
-      },
-      {
-        name: 'Матрасы',
-        to: 'mattresses'
-      },
-      {
-        name: 'Пуфы',
-        to: 'poufs'
-      },
-      {
-        name: 'Эксклюзивная мебель',
-        to: 'exclusiveFurniture'
-      },
-      {
-        name: '2D-3D модели',
-        to: '2D-3DModels'
-      },
-    ]
-  },
-  {
-    name: 'Индивидуальная мебель',
-    to: 'individualFurniture',
-  },
-  {
-    name: 'Контакты',
-    to: 'contacts',
-  },
-  {
-    name: 'О компании',
-    to: 'aboutCompany',
-  },
-];
-
-export type HeaderLinkType = typeof links[0];
+import { navLinks } from '../../../static';
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleMenuStatus = () => setIsMenuOpen(prev => !prev);
 
-  let Links = links.map((l, index) => <Link
+  let Links = navLinks.map((l, index) => <Link
     className='font-semibold hover:text-orange md:text-[14px] max-md:hidden'
     activeClassName='text-orange'
     containerClassName="max-md:hidden"
@@ -83,6 +29,6 @@ export const Header: React.FC = () => {
     {Links.slice(3, 4)}
     <Phone />
     <Lngs />
-    <BurgerMenu isActive={isMenuOpen} setIsActive={handleMenuStatus} links={links} />
+    <BurgerMenu isActive={isMenuOpen} setIsActive={handleMenuStatus} links={navLinks} />
   </header>
 };

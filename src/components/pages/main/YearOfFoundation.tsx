@@ -1,5 +1,4 @@
-const foundationYear = 1993;
-const currentYear = new Date().getFullYear();
+import { currentYear, foundationYear } from "../../../static";
 
 export const YearOfFoundation: React.FC = () => {
   return <section className="grid mt-16 gap-y-10 gap-x-5 items-center esm:flex esm:justify-between esm:flex-wrap md:mt-20">

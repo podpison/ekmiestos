@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import cn from 'classnames';
-import { HeaderLinkType } from "./Header";
 import { ChevronDown } from "../ChevronDown";
+import { NavLinkType } from "../../../static";
 
 type Props = {
   className?: string
@@ -11,7 +11,7 @@ type Props = {
   chevronClassName?: string
   linkClassName?: string //for hoverItem link
   hoverItemClassName?: string
-} & HeaderLinkType
+} & NavLinkType
 
 export const Link: React.FC<Props> = ({ to, name, hoverItems, className, activeClassName, containerClassName, hoverItemsContainerClassName, chevronClassName, linkClassName, hoverItemClassName }) => {
 
@@ -26,7 +26,7 @@ export const Link: React.FC<Props> = ({ to, name, hoverItems, className, activeC
           className,
           linkClassName
         )}
-        to={'/' + to}
+        to={to}
       >
         {name}
         <ChevronDown className={cn("", chevronClassName)} />
@@ -43,7 +43,7 @@ export const Link: React.FC<Props> = ({ to, name, hoverItems, className, activeC
       isActive && activeClassName,
       className,
     )}
-    to={'/' + to}
+    to={to}
   >
     {name}
   </NavLink>

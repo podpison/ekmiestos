@@ -20,7 +20,7 @@
     @apply text-gray text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px]
   }
   main {
-    @apply mt-[76px] sm:mt-[98px] md:mt-[107px] lg:mt-28 mw:mt-[109px]
+    @apply flex-1 mt-[76px] sm:mt-[98px] md:mt-[107px] lg:mt-28 mw:mt-[109px]
   }
   h1 {
     @apply font-semibold text-[25px] leading-tight sm:text-[30px] sm:leading-tight md:text-[35px] md:leading-tight lg:text-[42px] lg:leading-tight
