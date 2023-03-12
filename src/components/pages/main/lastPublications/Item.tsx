@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import { GoodsType } from "../novelties/Novelties";
+import { ProductCategoryItemType } from "../../../../redux/reducers/static";
 
 type Props = {
 
-} & GoodsType
+} & ProductCategoryItemType
 
-export const Item: React.FC<Props> = ({ category, id, img, name }) => {
+export const Item: React.FC<Props> = ({ id, img, name }) => {
   return <Link
-    className="block max-w-[270px] mx-auto"
-    to={`/${category}/${id}`}
+    className="group block max-w-[270px] mx-auto"
+    to={`/catalog/${id}`}
   >
     <img className="w-full max-h-[270px] object-contain" src={img} alt='item' />
-    <p className="uppercase font-medium text-center mt-4">{name}</p>
+    <p className="uppercase font-medium text-center transition-colors mt-4 group-hover:text-orange-hover">{name}</p>
   </Link>
 };

@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
 import { FLO } from "../../../ui/FLO";
 import { Slider } from "../../../ui/slider/Slider";
 import { Item } from "./Item";
+import { selectProductCategories } from './../../../../redux/selectors';
+import { useEffect, useMemo } from 'react';
 
 const settings = {
   dots: false,
@@ -30,67 +33,14 @@ const settings = {
   ],
 };
 
-const items = [
-  {
-    img: 'https://i.postimg.cc/vmHCcV4x/0.webp',
-    category: 'category',
-    price: '15200 UAH',
-    name: 'Martin',
-    id: 0,
-  },
-  {
-    img: 'https://i.postimg.cc/ZRXQ7sV6/1.webp',
-    category: 'category',
-    price: '15200 UAH',
-    name: 'Alba',
-    id: 1,
-  },
-  {
-    img: 'https://i.postimg.cc/pr86gQ64/2.webp',
-    category: 'category',
-    price: '15200 UAH',
-    name: 'Toscana',
-    id: 2,
-  },
-  {
-    img: 'https://i.postimg.cc/wxsZyHj2/3.webp',
-    category: 'category',
-    price: '15200 UAH',
-    name: 'Leonardo',
-    id: 3,
-  },
-  {
-    img: 'https://i.postimg.cc/wxsZyHj2/3.webp',
-    category: 'category',
-    price: '15200 UAH',
-    name: 'Leonardo',
-    id: 4,
-  },
-  {
-    img: 'https://i.postimg.cc/pr86gQ64/2.webp',
-    category: 'category',
-    price: '15200 UAH',
-    name: 'Toscana',
-    id: 5,
-  },
-  {
-    img: 'https://i.postimg.cc/ZRXQ7sV6/1.webp',
-    category: 'category',
-    price: '15200 UAH',
-    name: 'Alba',
-    id: 6,
-  },
-  {
-    img: 'https://i.postimg.cc/vmHCcV4x/0.webp',
-    category: 'category',
-    price: '15200 UAH',
-    name: 'Martin',
-    id: 7,
-  },
-]
-
 export const LastPublications: React.FC = () => {
-  const Items = items.map(i => <Item {...i} key={i.id} />)
+  let categories = useSelector(selectProductCategories);
+
+  let itemsToRender = useMemo(() => {
+    return categories.map(i => i.products[i.products.length - 1]);
+  }, [categories.length]);
+
+  let Items = itemsToRender.map(i => <Item {...i} key={i.id} />)
 
   return <section className="mt90-160">
     <h2><FLO text='Последние публикации' /></h2>

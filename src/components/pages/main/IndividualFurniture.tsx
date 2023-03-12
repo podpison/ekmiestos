@@ -25,8 +25,8 @@ export const IndividualFurniture: React.FC = () => {
         <img className='h-full w-full sm:w-[31%] sm:max-w-[424px] sm:right-[min(26%,_355px)] sm:absolute' src={bricks} alt='bricks' />
       </div>
     </div>
-    <Link className='block w-fit mt-28 mx-auto sm:mt-[30px] sm:ml-0' to='/individualFurniture'>
-      <Button className='' isOrange>Индивидуальная мебель</Button>
+    <Link className='block w-fit h-fit mt-28 mx-auto sm:mt-[30px] sm:ml-0' to='/individualFurniture'>
+      <Button className='' isOrangeHover>Индивидуальная мебель</Button>
     </Link>
   </section>
 };

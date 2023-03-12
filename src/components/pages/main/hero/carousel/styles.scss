@@ -4,11 +4,16 @@
     bottom: -30px;
     li {
       @apply m-0;
-      &.slick-active button:before {
+      &.slick-active button::before {
         @apply text-orange;
       }
-      button:before {
-        @apply text-white opacity-100 text-[7px] md:text-light;
+      &:not(.slick-active) {
+        button:hover::before {
+          @apply text-orange/30
+        }
+      }
+      button::before {
+        @apply text-white opacity-100 text-[7px] transition-colors md:text-light;
       }
     }
   }

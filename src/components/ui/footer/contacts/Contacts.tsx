@@ -8,6 +8,6 @@ export const Contacts: React.FC = () => {
       <SocialNetwork src={instagram} to='https://www.instagram.com/' />
       <SocialNetwork src={facebook} to='https://www.facebook.com/' />
     </div>
-    <a className='open-sans text-white' href='tel:+38 (099)-638-45-37'>+38 (099)-638-45-37</a>
+    <a className='open-sans text-white transition-colors hover:text-orange' href='tel:+38 (099)-638-45-37'>+38 (099)-638-45-37</a>
   </div>
 };

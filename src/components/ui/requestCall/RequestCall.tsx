@@ -50,7 +50,6 @@ export const RequestCall: React.FC<Props> = ({ heading, className }) => {
       }}
     >
       {({ errors, touched, values }) => {
-        console.log(errors)
         return <FormikForm>
           <Input
             name='firstName'

@@ -1,11 +1,11 @@
-import { MainPageHeroCarouselItemType } from "./Hero";
+import { MainPageHeroItemType } from "../../../../redux/reducers/static";
 
 type Props = {
+  src: MainPageHeroItemType
+}
 
-} & MainPageHeroCarouselItemType
-
-export const CarouselItem: React.FC<Props> = ({ category, img }) => {
+export const CarouselItem: React.FC<Props> = ({ src }) => {
   return <div>
-    <img src={img} alt={category} />
+    <img src={src} alt='product' />
   </div>
 };

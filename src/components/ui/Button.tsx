@@ -6,15 +6,17 @@ type Props = {
   isOrange?: boolean
   isArrowRight?: boolean
   isPaddings?: boolean
+  isOrangeHover?: boolean
   onClick?: () => void
 }
 
-export const Button: React.FC<Props> = ({ children, className, isOrange, isArrowRight, isPaddings = true, onClick }) => {
+export const Button: React.FC<Props> = ({ children, className, isOrange, isArrowRight, isPaddings = true, isOrangeHover, onClick }) => {
   return <button
     className={cn(
       'flex items-center text-base font-bold text-white uppercase h-fit transition-colors',
       isPaddings && 'py-3 px-5',
       isOrange && 'bg-orange hover:bg-light-gray',
+      isOrangeHover && 'bg-orange hover:bg-orange-hover',
       className,
     )}
     onClick={onClick}

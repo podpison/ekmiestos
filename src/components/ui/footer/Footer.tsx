@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
       <div className='max-sm:px-5 sm:grid sm:grid-cols-[max-content_1fr_271px] sm:gap-x-4'>
         <Links />
         <div className='mx-auto max-sm:mt-16 max-sm:max-w-[303px] max-sm:px-4 sm:mt-7'>
-          <Button className='w-full text-[13px] py-2 px-3' onClick={handlePCM} isPaddings={false} isOrange isArrowRight>Персональная консультация</Button>
+          <Button className='w-full text-[13px] py-2 px-3' onClick={handlePCM} isPaddings={false} isOrangeHover isArrowRight>Персональная консультация</Button>
         </div>
         <Contacts />
         <div className='mx-auto max-sm:mt-14 max-sm:max-w-[303px] max-sm:px-4 sm:col-[1] sm:row-[1/3]'>

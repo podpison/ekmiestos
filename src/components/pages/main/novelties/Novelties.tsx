@@ -3,53 +3,9 @@ import { Item } from './Item';
 import { Button } from '../../../ui/Button';
 import { Link } from 'react-router-dom';
 import { Slider } from '../../../ui/slider/Slider';
-
-const items = [
-  {
-    img: 'https://i.postimg.cc/s2B6dqDY/0.png',
-    category: 'category',
-    price: '15200 UAH',
-    name: 'ALBA',
-    id: 0,
-  },
-  {
-    img: 'https://i.postimg.cc/9fvxWbrv/1.png',
-    category: 'category',
-    price: '15200 UAH',
-    name: 'Martin',
-    id: 1,
-  },
-  {
-    img: 'https://i.postimg.cc/MKbgdCvX/2.png',
-    category: 'category',
-    price: '15200 UAH',
-    name: 'Luara',
-    id: 2,
-  },
-  {
-    img: 'https://i.postimg.cc/9fvxWbrv/1.png',
-    category: 'category',
-    price: '15200 UAH',
-    name: 'Martin',
-    id: 3,
-  },
-  {
-    img: 'https://i.postimg.cc/MKbgdCvX/2.png',
-    category: 'category',
-    price: '15200 UAH',
-    name: 'Luara',
-    id: 4,
-  },
-  {
-    img: 'https://i.postimg.cc/s2B6dqDY/0.png',
-    category: 'category',
-    price: '15200 UAH',
-    name: 'ALBA',
-    id: 5,
-  },
-];
-
-export type GoodsType = typeof items[0]
+import { useSelector } from 'react-redux';
+import { selectProductCategories } from '../../../../redux/selectors';
+import { useMemo } from 'react';
 
 const settings = {
   dots: false,
@@ -59,26 +15,40 @@ const settings = {
   slidesToScroll: 1,
   responsive: [
     {
-      breakpoint: 900,
+      breakpoint: 940,
       settings: {
-        slidesToShow: 2
+        slidesToShow: 2,
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 640,
       settings: {
-        slidesToShow: 1
+        slidesToShow: 1,
       }
     },
   ],
 };
 
 export const Novelties: React.FC = () => {
-  let Items = items.map(i => <Item {...i} key={i.id} />);
+  let categories = useSelector(selectProductCategories);
+
+  let itemsToRender = useMemo(() => {
+    let items = [];
+
+    for (let category of categories) {
+      for (let product of category.products) {
+        product.isNew && items.push(product);
+      };
+    };
+
+    return items;
+  }, [categories.length]);
+
+  let Items = itemsToRender.map(i => <Item {...i} key={i.id} />);
 
   return <section className='mt90-160'>
     <h2><FLO text='Новинки' /></h2>
-    <Slider className='mt30-80 w-[calc(100%_-_50px)] max-w-[1070px] mx-auto' settings={settings} isChevronArrows>
+    <Slider className='mt30-80 w-[calc(100%_-_50px)] max-w-[1070px] mx-auto md:mt-7 lg:mt-12' settings={settings} isChevronArrows>
       {Items}
     </Slider>
     <Link className='block w-fit mx-auto mt-[60px]' to='/catalog'>
